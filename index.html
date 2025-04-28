@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ella & Zay 12 December 2025</title>
+  <title>Ella & Zay</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
   <style>
     html {
@@ -21,7 +21,7 @@
       justify-content: center;
       text-align: center;
       min-height: 100%;
-      padding: 1rem; /* Padding to prevent content from getting too close to the edges */
+      padding: 1rem;
       box-sizing: border-box;
     }
 
@@ -29,10 +29,10 @@
       padding: 2rem;
       color: #8b6b61;
       animation: fadeIn 2s ease;
-      flex-grow: 1; /* Allow container to take up available space */
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Vertically center the content */
+      justify-content: center;
     }
 
     @keyframes fadeIn {
@@ -42,10 +42,10 @@
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: calc(4vw + 2rem); /* Flexible font size that adjusts with viewport */
+      font-size: calc(4vw + 2rem);
       margin: 0;
       color: #b98e8e;
-      line-height: 1.2; /* Ensure no overlapping of text */
+      line-height: 1.2;
     }
 
     h2 {
@@ -60,12 +60,12 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.2rem;
       color: #6b4c4c;
+	  margin: 1rem;
     }
 
     .timeline ul {
       list-style-type: none;
       padding: 0;
-	  text-align: left;
     }
 
     .timeline li {
@@ -157,6 +157,22 @@
       margin-top: 2rem;
       font-weight: bold;
     }
+
+    .map-container {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   </style>
 </head>
 <body>
@@ -168,14 +184,25 @@
   <!-- Countdown Timer -->
   <div class="countdown" id="countdown"></div>
 
+  <!-- Google Map Embed -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.634822855902!2d98.2603263756855!3d7.933154105177576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503bb28a54b709%3A0x404a5bfccc13a069!2sParesa%20Resort!5e0!3m2!1sen!2sau!4v1745883536907!5m2!1sen!2sau"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  
   <!-- Wedding Details -->
   <div class="wedding-details">
-    <p><strong>Venue:</strong> Paresa Resort, 49 Kamala, Kathu District, Phuket 83150, Thailand</p>
+  <br/>
     <p><strong>Dress Code:</strong> Formal Attire, Black Tie Optional</p>
   </div>
+
   <!-- Wedding Timeline -->
   <div class="timeline">
-  <h3>Wedding Timeline</h3>
+    <h3>Event Timeline</h3>
     <ul>
       <li><strong>4:00 PM:</strong> Guest Arrival & Welcome Drinks</li>
       <li><strong>5:00 PM:</strong> Ceremony Begins</li>
@@ -186,11 +213,10 @@
     </ul>
   </div>
 
-	<div>
-		<br/>
-		<p>Together with their families, Ella & Zay joyfully invite you to celebrate their wedding day.</p>
-	</div>
-  
+  <div>
+    <br/>
+    <p>Together with their families, Ella & Zay joyfully invite you to celebrate their wedding day.</p>
+  </div>
 
   <a href="#rsvp-form" class="rsvp-button">RSVP Now</a>
 </div>
