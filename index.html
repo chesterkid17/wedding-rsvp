@@ -12,7 +12,7 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      height: 100%;
       background: linear-gradient(to bottom right, #fdfcfb, #f9f5f0);
       font-family: 'Poppins', sans-serif;
       display: flex;
@@ -20,25 +20,32 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      min-height: 100vh;
+      min-height: 100%;
+      padding: 1rem; /* Padding to prevent content from getting too close to the edges */
+      box-sizing: border-box;
     }
 
     .container {
       padding: 2rem;
       color: #8b6b61;
       animation: fadeIn 2s ease;
+      flex-grow: 1; /* Allow container to take up available space */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Vertically center the content */
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px);}
-      100% { opacity: 1; transform: translateY(0);}
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 4rem;
+      font-size: calc(4vw + 2rem); /* Flexible font size that adjusts with viewport */
       margin: 0;
       color: #b98e8e;
+      line-height: 1.2; /* Ensure no overlapping of text */
     }
 
     h2 {
