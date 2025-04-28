@@ -56,6 +56,23 @@
       color: #9b7a7a;
     }
 
+    .wedding-details, .timeline {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #6b4c4c;
+    }
+
+    .timeline ul {
+      list-style-type: none;
+      padding: 0;
+	  text-align: left;
+    }
+
+    .timeline li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
     p {
       font-size: 1rem;
       max-width: 400px;
@@ -132,6 +149,14 @@
       font-size: 0.8rem;
       color: #aaa;
     }
+
+    .countdown {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #b98e8e;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -139,7 +164,33 @@
 <div class="container">
   <h1>Ella & Zay</h1>
   <h2>12 December 2025</h2>
-  <p>Together with their families, Ella & Zay joyfully invite you to celebrate their wedding day.</p>
+  
+  <!-- Countdown Timer -->
+  <div class="countdown" id="countdown"></div>
+
+  <!-- Wedding Details -->
+  <div class="wedding-details">
+    <p><strong>Venue:</strong> Paresa Resort, 49 Kamala, Kathu District, Phuket 83150, Thailand</p>
+    <p><strong>Dress Code:</strong> Formal Attire, Black Tie Optional</p>
+  </div>
+  <!-- Wedding Timeline -->
+  <div class="timeline">
+  <h3>Wedding Timeline</h3>
+    <ul>
+      <li><strong>4:00 PM:</strong> Guest Arrival & Welcome Drinks</li>
+      <li><strong>5:00 PM:</strong> Ceremony Begins</li>
+      <li><strong>5:30 PM:</strong> Cocktail Hour</li>
+      <li><strong>7:00 PM:</strong> Dinner & Toasts</li>
+      <li><strong>9:00 PM:</strong> First Dance & Dancing</li>
+      <li><strong>11:00 PM:</strong> Farewell & After Party (Optional)</li>
+    </ul>
+  </div>
+
+	<div>
+		<br/>
+		<p>Together with their families, Ella & Zay joyfully invite you to celebrate their wedding day.</p>
+	</div>
+  
 
   <a href="#rsvp-form" class="rsvp-button">RSVP Now</a>
 </div>
@@ -164,6 +215,32 @@
 </div>
 
 <footer>© Ella & Zay 2025</footer>
+
+<script>
+  // Countdown Timer
+  const countdownDate = new Date("Dec 12, 2025 16:00:00").getTime();
+  const countdownElement = document.getElementById("countdown");
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = countdownDate - now;
+
+    if (timeLeft <= 0) {
+      countdownElement.innerHTML = "The wedding has started!";
+      clearInterval(timerInterval);
+      return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  const timerInterval = setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
