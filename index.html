@@ -3,120 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ella & Zay - 12 December 2025</title>
+  <title>Ella & Zay 12 December 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #fdfcfb, #f9f5f0);
       font-family: 'Poppins', sans-serif;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-      animation: fadeIn 2s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.8);
-      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      border-bottom: 1px solid #eee;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      color: #b25d7f;
-    }
-
-    header p {
-      font-size: 1.3rem;
-      margin-top: 1rem;
-      color: #666;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 600px;
-      margin: 2rem auto;
-      background: rgba(255, 255, 255, 0.9);
       padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      color: #8b6b61;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      margin: 0;
+      color: #b98e8e;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 0.5rem 0 2rem 0;
+      font-weight: normal;
+      color: #9b7a7a;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 400px;
+      margin: 0 auto 2rem;
+      color: #6b4c4c;
+    }
+
+    .rsvp-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #d4a5a5;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s ease, transform 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .rsvp-button:hover {
+      background: #c48a8a;
+      transform: scale(1.05);
+    }
+
+    #rsvp-form {
+      margin-top: 4rem;
+      width: 90%;
+      max-width: 500px;
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    #rsvp-form h3 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #b98e8e;
+      margin-bottom: 1.5rem;
     }
 
     form input, form select, form textarea {
       width: 100%;
       padding: 1rem;
       margin-top: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fefefe;
       font-size: 1rem;
-      background: #fff;
     }
 
     form button {
       width: 100%;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       padding: 1rem;
-      background: #ff69b4;
-      color: white;
+      background: #d4a5a5;
       border: none;
-      border-radius: 8px;
+      color: white;
       font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.3s ease;
     }
 
     form button:hover {
-      background: #ff1493;
-      transform: scale(1.05);
+      background: #c48a8a;
+      transform: scale(1.03);
     }
 
     footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #fff;
-      background: rgba(0,0,0,0.3);
       margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Ella & Zay</h1>
-  <p>Kindly RSVP to join our celebration</p>
-</header>
-
 <div class="container">
-  <form action="https://formspree.io/f/mqaqaolv" method="POST">
-    <label for="name">Full Name *</label>
-    <input type="text" id="name" name="name" required>
+  <h1>Ella & Zay</h1>
+  <h2>12 December 2025</h2>
+  <p>Together with their families, Ella & Zay joyfully invite you to celebrate their wedding day.</p>
 
-    <label for="attending">Will you attend? *</label>
-    <select id="attending" name="attending" required>
-      <option value="">--Select an option--</option>
-      <option value="Yes">Yes, absolutely!</option>
+  <a href="#rsvp-form" class="rsvp-button">RSVP Now</a>
+</div>
+
+<div id="rsvp-form">
+  <h3>RSVP</h3>
+  <form action="https://formspree.io/f/mqaqaolv" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+
+    <select name="attending" required>
+      <option value="">Will you attend?</option>
+      <option value="Yes">Yes, of course!</option>
       <option value="No">Sadly can't make it</option>
     </select>
 
-    <label for="guests">Number of Guests</label>
-    <input type="number" id="guests" name="guests" min="0" max="10">
+    <input type="number" name="guests" placeholder="Number of Guests" min="0" max="10">
 
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message" rows="4"></textarea>
+    <textarea name="message" rows="4" placeholder="Leave a message (optional)"></textarea>
 
     <button type="submit">Send RSVP</button>
   </form>
 </div>
 
-<footer>
-  © 2025 Ella & Zay | All our love 🌸
-</footer>
+<footer>© Ella & Zay 2025</footer>
 
 </body>
 </html>
