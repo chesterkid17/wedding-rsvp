@@ -10,22 +10,22 @@
       scroll-behavior: smooth;
     }
     body {
-	  margin: 0;
-	  padding: 0;
-	  height: 100%;
-	  background: 
-		linear-gradient(to bottom right, rgba(253, 252, 251, 0.7), rgba(249, 245, 240, 0.7)),
-		url('https://i.postimg.cc/d3V0Qw9r/EllaZay.jpg') no-repeat center center / cover;
-	  font-family: 'Poppins', sans-serif;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  justify-content: center;
-	  text-align: center;
-	  min-height: 100%;
-	  padding: 1rem;
-	  box-sizing: border-box;
-	}
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: 
+        linear-gradient(to bottom right, rgba(253, 252, 251, 0.7), rgba(249, 245, 240, 0.7)),
+        url('https://i.postimg.cc/d3V0Qw9r/EllaZay.jpg') no-repeat center center / cover;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
 
     .container {
       padding: 2rem;
@@ -58,11 +58,12 @@
       color: #9b7a7a;
     }
 
-    .wedding-details, .timeline {
+    .wedding-details, .timeline, .invitation-text {
       font-family: 'Playfair Display', serif;
       font-size: 1.2rem;
       color: #6b4c4c;
-	  margin: 1rem;
+      margin: 1rem;
+      text-align: center;
     }
 
     .timeline ul {
@@ -75,11 +76,32 @@
       font-size: 1.1rem;
     }
 
+    .timeline h3 {
+      font-family: 'Playfair Display', serif;
+      color: #b98e8e;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
     p {
       font-size: 1rem;
       max-width: 400px;
       margin: 0 auto 2rem;
       color: #6b4c4c;
+    }
+	
+	.wedding-details p {
+      font-size: 1.2rem;
+      color: #6b4c4c;
+      margin: 1rem auto;
+      max-width: 600px;
+    }
+
+    .invitation-text p {
+      font-size: 1.2rem;
+      color: #6b4c4c;
+      margin: 1rem auto;
+      max-width: 600px;
     }
 
     .rsvp-button {
@@ -198,7 +220,7 @@
   
   <!-- Wedding Details -->
   <div class="wedding-details">
-  <br/>
+    <br/>
     <p><strong>Dress Code:</strong> Formal Attire, Black Tie Optional</p>
   </div>
 
@@ -215,7 +237,8 @@
     </ul>
   </div>
 
-  <div>
+  <!-- Invitation Text -->
+  <div class="invitation-text">
     <br/>
     <p>Together with their families, Ella & Zay joyfully invite you to celebrate their wedding day.</p>
   </div>
