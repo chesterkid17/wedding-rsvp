@@ -13,28 +13,48 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background: 
-        linear-gradient(to bottom right, rgba(253, 252, 251, 0.7), rgba(249, 245, 240, 0.7)),
-        url('https://i.postimg.cc/1RVmHCj9/EZ.jpg') no-repeat center center / cover;
       font-family: 'Poppins', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       text-align: center;
       min-height: 100%;
       padding: 1rem;
       box-sizing: border-box;
+	  background-color: #e6e6e6;
     }
+
+    /* Header with image and round top border effect */
+    .header-image {
+	  width: 40%;
+	  height: 100vh; /* Adjusted for portrait mode */
+	  background-image: url('https://i.postimg.cc/9XyqK8kQ/IMG-6217.jpg');
+	  background-position: center;
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  border-radius: 425px 425px 25px 25px; /* Rounded top corners */
+	  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	  margin-top: 2rem;
+	  
+	  /* Centering the image */
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
 
     .container {
       padding: 2rem;
-      color: #8b6b61;
+      color: #333333;
       animation: fadeIn 2s ease;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
+      text-align: center;
+      width: 100%;
     }
 
     @keyframes fadeIn {
@@ -44,21 +64,65 @@
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: calc(4vw + 2rem);
+      font-size: calc(4vw + 2rem); /* Increased size for portrait mode */
       margin: 0;
-      color: #b98e8e;
-      line-height: 1.2;
+      color: #333333;
+      line-height: 1;
     }
 
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin: 0.5rem 0 2rem 0;
       font-weight: bold;
       color: #9b7a7a;
     }
+	
+	h3 {
+	  font-family: 'Playfair Display', serif;
+      color: #333333;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+	}
+	
+	.wedding-details {
+	  font-family: 'Playfair Display', serif;
+	  font-size: 1.2rem;
+	  color: #6b4c4c;
+	  margin: 2rem auto; /* Center the block */
+	  text-align: center;
+	  display: flex;
+	  justify-content: center; /* Center the elements horizontally */
+	  align-items: center;
+	  width: 100%;
+	  max-width: 800px; /* Adjust the max-width if needed */
+	  position: relative; /* Needed for positioning the underline */
+	}
 
-    .wedding-details, .timeline, .invitation-text {
+	.wedding-details div:first-child {
+	  margin-right: 10rem; /* Add space between date and place */
+	}
+
+	.wedding-details div:last-child {
+	  margin-right: 0; /* Remove margin for the last element */
+	}
+
+	.wedding-details p {
+	  margin: 0;
+	  padding: 0;
+	}
+
+	.underline {
+	  position: absolute;
+	  bottom: -5px; /* Position it slightly below the texts */
+	  left: 30%;
+	  right: 30%;
+	  width: 40%; /* Make it span across the entire width */
+	  height: 2px;
+	  background-color: #333333; /* Underline color */
+	}
+
+    .timeline, .invitation-text {
       font-family: 'Playfair Display', serif;
       font-size: 1.2rem;
       color: #6b4c4c;
@@ -75,13 +139,71 @@
       margin-bottom: 1rem;
       font-size: 1.1rem;
     }
+	
+	/* Dress Code Section */
+.dress-code {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #6b4c4c;
+  text-align: center;
+  margin-top: 3rem;
+}
 
-    .timeline h3 {
-      font-family: 'Playfair Display', serif;
-      color: #b98e8e;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
+.dress-code p {
+  font-size: 1.2rem;
+  color: #6b4c4c;
+  margin-top: 1rem;
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gallery-item {
+  width: 100%;
+  max-width: 500px; /* Adjust for the large images */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail {
+  width: 100%;
+  max-width: 80px; /* Adjust for thumbnails */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.first-row {
+  justify-content: center;
+}
+
+.second-row, .third-row {
+  justify-content: space-between;
+}
+
+.fourth-row {
+  justify-content: center;
+}
+
+.fifth-row {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 
     p {
       font-size: 1rem;
@@ -89,71 +211,22 @@
       margin: 0 auto 2rem;
       color: #6b4c4c;
     }
-	
-	.wedding-details p {
-      font-size: 1.2rem;
-      color: #6b4c4c;
-      margin: 1rem auto;
-      max-width: 600px;
+    
+    .rsvp-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #d4a5a5;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s ease, transform 0.3s ease;
+      margin-top: 1rem;
     }
 
-    .invitation-text p {
-      font-size: 1.2rem;
-      color: #6b4c4c;
-      margin: 1rem auto;
-      max-width: 600px;
-    }
-	
     .rsvp-button:hover {
       background: #c48a8a;
       transform: scale(1.05);
-    }
-
-    #rsvp-form {
-      margin-top: 4rem;
-      width: 90%;
-      max-width: 500px;
-      padding: 2rem;
-      border-radius: 20px;
-      text-align: left;
-    }
-
-    #rsvp-form h3 {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-	  font-weight: bold;
-      color: #b98e8e;
-	  font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    form input, form select, form textarea {
-      width: 100%;
-      padding: 1rem;
-      margin-top: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      background: #fefefe;
-      font-size: 1rem;
-    }
-
-    form button {
-      width: 100%;
-      margin-top: 2rem;
-      padding: 1rem;
-      background: #d4a5a5;
-      border: none;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    form button:hover {
-      background: #c48a8a;
-      transform: scale(1.03);
     }
 
     footer {
@@ -165,7 +238,7 @@
     .countdown {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
-      color: #b98e8e;
+      color: #333333;
       margin-top: 2rem;
     }
 
@@ -184,25 +257,91 @@
       height: 100%;
       border: 0;
     }
+
+    /* RSVP Form Styles */
+    #rsvp-form {
+      margin-top: 4rem;
+      width: 100%;
+      max-width: 500px;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: left;
+    }
+
+    #rsvp-form h3 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      color: #333333;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fefefe;
+      font-size: 1rem;
+	  font-family: 'Playfair Display', serif;
+    }
+
+    form button {
+      width: 100%;
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #d4a5a5;
+      border: none;
+      color: #e6e6e6;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+	  font-family: 'Playfair Display', serif;
+    }
+
+    form button:hover {
+      background: #c48a8a;
+      transform: scale(1.03);
+	  color: #333333;
+    }
+
   </style>
 </head>
 <body>
 
 <div class="container">
   <h1>Ella & Zay</h1>
-  <h2>12 December 2025</h2>
+ 
+   <!-- Wedding Details -->
+ <div class="wedding-details">
+  <div>
+    <p><strong>12.12.25</strong><br/>date</p>
+  </div>
+  <div>
+    <p><strong>Phuket</strong><br/>place</p>
+  </div>
+  <div class="underline"></div> 
+</div>
+
   
   <!-- Countdown Timer -->
   <div class="countdown" id="countdown"></div>
 
-  <!-- Wedding Details -->
-  <div class="wedding-details">
-    <br/>
-    <p><strong>Dress Code:</strong> Formal Attire, Black Tie Optional</p>
-	<br/>
-	<p><strong>Location:</strong> 49, Kamala, Kathu District, Phuket 83150, Thailand</p>
-  </div>
+<!-- Header Image Section with photo frame effect -->
+<div class="header-image"></div>
 
+  <!-- Invitation Text -->
+  <div class="invitation-text">
+    <h3>Dear Friends & Family</h3>
+    <p>This december a very special and happy event is going to happen - our wedding</p>
+	<p>It is impossible to imagine this day without our closet people. Thus, we are happy to invite you to join and share this wonderful occasion with us</p>
+  </div>
+  
+  
   <!-- Wedding Timeline -->
   <div class="timeline">
     <h3>Event Timeline</h3>
@@ -215,15 +354,42 @@
       <li><strong>11:00 PM:</strong> Farewell & After Party (Optional)</li>
     </ul>
   </div>
+  
+  <!-- Dress Code Section -->
+<div class="dress-code">
+  <h3>Dress Code</h3>
+  <p>We would be very happy if your outfit is in the colours of the wedding theme.</p>
+</div>
 
-
-  <!-- Invitation Text -->
-  <div class="invitation-text">
-    <br/>
-    <p>Together with their families, Ella & Zay joyfully invite you to celebrate their wedding day.</p>
+<!-- Image Gallery Section -->
+<div class="image-gallery">
+  <div class="row first-row">
+    <img src="https://i.postimg.cc/Bn02s1KK/image1.jpg" alt="Gallery Image 1" class="gallery-item">
+  </div>
+  <div class="row second-row">
+    <img src="image2.jpg" alt="Gallery Image 2" class="gallery-item">
+    <img src="image3.jpg" alt="Gallery Image 3" class="gallery-item">
+  </div>
+  <div class="row third-row">
+    <img src="image4.jpg" alt="Gallery Image 4" class="gallery-item">
+    <img src="image5.jpg" alt="Gallery Image 5" class="gallery-item">
+  </div>
+  <div class="row fourth-row">
+    <img src="image6.jpg" alt="Gallery Image 6" class="gallery-item">
+  </div>
+  <div class="row fifth-row">
+    <img src="image7.jpg" alt="Gallery Image 7" class="thumbnail">
+    <img src="image8.jpg" alt="Gallery Image 8" class="thumbnail">
+    <img src="image9.jpg" alt="Gallery Image 9" class="thumbnail">
+    <img src="image10.jpg" alt="Gallery Image 10" class="thumbnail">
+    <img src="image11.jpg" alt="Gallery Image 11" class="thumbnail">
   </div>
 </div>
 
+  
+</div>
+
+<!-- RSVP Form -->
 <div id="rsvp-form">
   <h3>RSVP</h3>
   <form action="https://formspree.io/f/mqaqaolv" method="POST">
@@ -244,14 +410,14 @@
 </div>
 
 <!-- Google Map Embed -->
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.634822855902!2d98.2603263756855!3d7.933154105177576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503bb28a54b709%3A0x404a5bfccc13a069!2sParesa%20Resort!5e0!3m2!1sen!2sau!4v1745883536907!5m2!1sen!2sau"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.634822855902!2d98.2603263756855!3d7.933154105177576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503bb28a54b709%3A0x404a5bfccc13a069!2sParesa%20Resort!5e0!3m2!1sen!2sau!4v1745883536907!5m2!1sen!2sau"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
 
 <footer>© Ella & Zay 2025</footer>
 
