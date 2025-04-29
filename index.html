@@ -15,7 +15,7 @@
       height: 100%;
       background: 
         linear-gradient(to bottom right, rgba(253, 252, 251, 0.7), rgba(249, 245, 240, 0.7)),
-        url('https://i.postimg.cc/pTTNpTgW/EZ.jpg') no-repeat center center / cover;
+        url('https://i.postimg.cc/1RVmHCj9/EZ.jpg') no-repeat center center / cover;
       font-family: 'Poppins', sans-serif;
       display: flex;
       flex-direction: column;
@@ -54,7 +54,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
       margin: 0.5rem 0 2rem 0;
-      font-weight: normal;
+      font-weight: bold;
       color: #9b7a7a;
     }
 
@@ -103,19 +103,7 @@
       margin: 1rem auto;
       max-width: 600px;
     }
-
-    .rsvp-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #d4a5a5;
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: background 0.3s ease, transform 0.3s ease;
-      margin-top: 1rem;
-    }
-
+	
     .rsvp-button:hover {
       background: #c48a8a;
       transform: scale(1.05);
@@ -125,17 +113,17 @@
       margin-top: 4rem;
       width: 90%;
       max-width: 500px;
-      background: white;
       padding: 2rem;
       border-radius: 20px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
       text-align: left;
     }
 
     #rsvp-form h3 {
       text-align: center;
       font-family: 'Playfair Display', serif;
+	  font-weight: bold;
       color: #b98e8e;
+	  font-size: 1.8rem;
       margin-bottom: 1.5rem;
     }
 
@@ -176,10 +164,9 @@
 
     .countdown {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #b98e8e;
       margin-top: 2rem;
-      font-weight: bold;
     }
 
     .map-container {
@@ -208,20 +195,12 @@
   <!-- Countdown Timer -->
   <div class="countdown" id="countdown"></div>
 
-  <!-- Google Map Embed -->
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.634822855902!2d98.2603263756855!3d7.933154105177576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503bb28a54b709%3A0x404a5bfccc13a069!2sParesa%20Resort!5e0!3m2!1sen!2sau!4v1745883536907!5m2!1sen!2sau"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-  
   <!-- Wedding Details -->
   <div class="wedding-details">
     <br/>
     <p><strong>Dress Code:</strong> Formal Attire, Black Tie Optional</p>
+	<br/>
+	<p><strong>Location:</strong> 49, Kamala, Kathu District, Phuket 83150, Thailand</p>
   </div>
 
   <!-- Wedding Timeline -->
@@ -237,13 +216,12 @@
     </ul>
   </div>
 
+
   <!-- Invitation Text -->
   <div class="invitation-text">
     <br/>
     <p>Together with their families, Ella & Zay joyfully invite you to celebrate their wedding day.</p>
   </div>
-
-  <a href="#rsvp-form" class="rsvp-button">RSVP Now</a>
 </div>
 
 <div id="rsvp-form">
@@ -264,6 +242,16 @@
     <button type="submit">Send RSVP</button>
   </form>
 </div>
+
+<!-- Google Map Embed -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.634822855902!2d98.2603263756855!3d7.933154105177576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503bb28a54b709%3A0x404a5bfccc13a069!2sParesa%20Resort!5e0!3m2!1sen!2sau!4v1745883536907!5m2!1sen!2sau"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 
 <footer>© Ella & Zay 2025</footer>
 
