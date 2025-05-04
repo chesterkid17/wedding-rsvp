@@ -134,6 +134,10 @@
 	.wedding-details .bigger {
 	  font-size: 1.5rem;
 	}
+	
+	.wedding-details .normal {
+	  font-size: 1.3rem;
+	}
 
 	.underline {
 	  position: absolute;
@@ -178,13 +182,13 @@
   font-size: 1.5rem;
   color: #6b4c4c;
   text-align: center;
-  margin-top: 3rem;
 }
 
-.dress-code p {
-  font-size: 1.2rem;
+.dress-code span {
+  display: block;           /* Makes each span act like a block element for vertical spacing */
+  font-size: 1.3rem;
   color: #6b4c4c;
-  margin-top: 1rem;
+  margin: 1rem 0;           /* Adds top and bottom margin */
 }
 
 /* Image Gallery Styles */
@@ -193,13 +197,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #6b4c4c;
 }
 
 .row {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .gallery-item {
@@ -275,15 +282,16 @@
     }
 
     .map-container {
-      margin-top: 2rem;
       width: 100%;
       max-width: 600px;
       height: 400px;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 	   margin-left: auto; /* Center the map horizontally */
   margin-right: auto; /* Center the map horizontally */
+		 font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #6b4c4c;
     }
 
     .map-container iframe {
@@ -316,7 +324,6 @@ form textarea {
 
     /* RSVP Form Styles */
     #rsvp-form {
-       margin-top: 4rem;
   width: 100%;
   max-width: 500px;
   border-radius: 20px;
@@ -405,10 +412,10 @@ form textarea {
    <!-- Wedding Details -->
  <div class="wedding-details">
   <div>
-    <p><strong><span class="bigger">12.12.25</span></strong><br/>Date</p>
+    <p><strong><span class="bigger">12.12.2025</span></strong><br/><span class="normal">Date</span></p>
   </div>
   <div>
-    <p><strong><span class="bigger">Phuket</span></strong><br/>Place</p>
+    <p><strong><span class="bigger">Phuket</span></strong><br/><span class="normal">Place</span></p>
   </div>
   <div class="underline"></div> 
 </div>
@@ -445,20 +452,16 @@ form textarea {
   
   <!-- Dress Code Section -->
 <div class="dress-code">
-  <h3>Dress Code</h3>
-  <p>We would be very happy if your outfit is in the colours of the wedding theme.</p>
+  <h3>What's the Vibe?</h3>
+  <span>WEDDING DAY ATTIRE : Beach Formal</span>
 </div>
 
 <!-- Image Gallery Section -->
 <div class="image-gallery">
+  <span>Color Palette</span>
   <div class="row first-row">
-    <img src="https://i.postimg.cc/RZDZm8gk/image0.jpg" alt="Gallery Image 1" class="gallery-item">
-  </div>
-  <div class="row second-row">
-    <img src="image2.jpg" alt="Gallery Image 2" class="gallery-item">
- </div>
-
-  
+    <img src="https://i.postimg.cc/pLT181PX/pallete.jpg" alt="Gallery Image 1" class="gallery-item">
+  </div>  
 </div>
 
 <!-- RSVP Form -->
@@ -483,6 +486,13 @@ form textarea {
 
 <!-- Google Map Embed -->
 <div class="map-container">
+<h3>Location</h3>
+<h4>Paresa Resort Phuket</h4>
+<p>
+49, Tambon Kamala, Amphoe Kathu, Chang Wat Phuket 83150, Thailand
+</p>
+
+
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.634822855902!2d98.2603263756855!3d7.933154105177576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503bb28a54b709%3A0x404a5bfccc13a069!2sParesa%20Resort!5e0!3m2!1sen!2sau!4v1745883536907!5m2!1sen!2sau"
     allowfullscreen=""
