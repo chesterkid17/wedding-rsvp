@@ -65,6 +65,15 @@
       text-align: center;
       width: 100%;
     }
+	
+	.frame {
+  border: 1px solid #000;      /* Thin black border */
+  border-radius: 20px;         /* Rounded corners */
+  padding: 1rem;               /* Optional: adds space inside */
+   margin: 1rem;
+  box-sizing: border-box;      /* Ensures padding doesn't affect total width */
+}
+
 
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
@@ -106,6 +115,7 @@
 	  width: 100%;
 	  max-width: 800px; /* Adjust the max-width if needed */
 	  position: relative; /* Needed for positioning the underline */
+	  
 	}
 
 	.wedding-details div:first-child {
@@ -120,6 +130,10 @@
 	  margin: 0;
 	  padding: 0;
 	}
+	
+	.wedding-details .bigger {
+	  font-size: 1.5rem;
+	}
 
 	.underline {
 	  position: absolute;
@@ -130,6 +144,15 @@
 	  height: 2px;
 	  background-color: #333333; /* Underline color */
 	}
+	
+	@media (max-width: 768px) {
+  .wedding-details .underline {
+    left: 5%;
+    right: 5%;
+    width: 90%; /* Increased width for mobile */
+  }
+}
+
 
     .timeline, .invitation-text {
       font-family: 'Playfair Display', serif;
@@ -259,6 +282,8 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+	   margin-left: auto; /* Center the map horizontally */
+  margin-right: auto; /* Center the map horizontally */
     }
 
     .map-container iframe {
@@ -273,27 +298,34 @@
     margin: 2rem auto;
   }
 
-  form input,
-  form select,
-  form textarea {
-    box-sizing: border-box;
-    margin-right: 0;
-    padding: 1rem;
-  }
+ form input,
+form textarea {
+  width: 100% !important;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fefefe;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #6b4c4c;
+  box-sizing: border-box;
+  line-height: 1.5;
 }
-
+}
 
     /* RSVP Form Styles */
     #rsvp-form {
-      margin-top: 4rem;	  
-      width: 100%;
-      max-width: 500px;
-      padding: 2rem;
-      border-radius: 20px;
-      text-align: left;
+       margin-top: 4rem;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  text-align: left;
+  margin-left: auto; /* Center the form horizontally */
+  margin-right: auto; /* Center the form horizontally */
 	  
 	  form {
-		margin-right: 2rem;
+		margin-right: 3rem;
 	  }
     }
 
@@ -306,7 +338,7 @@
       margin-bottom: 1.5rem;
     }
 
-    form input, form select, form textarea {
+    form input, form textarea {
       width: 100%;
       padding: 1rem;
       margin-top: 1rem;
@@ -316,6 +348,29 @@
       font-size: 1rem;
 	  font-family: 'Playfair Display', serif;
     }
+	
+	form select {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fefefe;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #6b4c4c;
+  box-sizing: border-box;
+  line-height: 1.5;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%236b4c4c" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem; /* Space for arrow */
+}
 
     form button {
       width: 100%;
@@ -343,15 +398,17 @@
 <body>
 
 <div class="container">
-  <h1>Ella & Zay</h1>
+<div class="frame">
+<br/>
+<h1>Ella & Zay</h1>
  
    <!-- Wedding Details -->
  <div class="wedding-details">
   <div>
-    <p><strong>12.12.25</strong><br/>date</p>
+    <p><strong><span class="bigger">12.12.25</span></strong><br/>Date</p>
   </div>
   <div>
-    <p><strong>Phuket</strong><br/>place</p>
+    <p><strong><span class="bigger">Phuket</span></strong><br/>Place</p>
   </div>
   <div class="underline"></div> 
 </div>
@@ -366,9 +423,11 @@
   <!-- Invitation Text -->
   <div class="invitation-text">
     <h3>Dear Friends & Family</h3>
-    <p>This december a very special and happy event is going to happen - our wedding</p>
-	<p>It is impossible to imagine this day without our closet people. Thus, we are happy to invite you to join and share this wonderful occasion with us</p>
+    <p>This December a very special and happy event is going to happen - our wedding.</p>
+	<p>It is impossible to imagine this day without our closet people. Thus, we are happy to invite you to join and share this wonderful occasion with us.</p>
   </div>
+</div>
+  
   
   
   <!-- Wedding Timeline -->
@@ -379,7 +438,7 @@
       <li><strong>5:00 PM:</strong> Ceremony Begins</li>
       <li><strong>6:00 PM:</strong> Cocktail Hour</li>
       <li><strong>7:00 PM:</strong> Dinner & Toasts</li>
-      <li><strong>9:00 PM:</strong> First Dance & Dancing</li>
+      <li><strong>9:00 PM:</strong> Party</li>
       <li><strong>11:00 PM:</strong> Farewell & After Party (Optional)</li>
     </ul>
   </div>
@@ -393,27 +452,11 @@
 <!-- Image Gallery Section -->
 <div class="image-gallery">
   <div class="row first-row">
-    <img src="https://i.postimg.cc/Bn02s1KK/image1.jpg" alt="Gallery Image 1" class="gallery-item">
+    <img src="https://i.postimg.cc/RZDZm8gk/image0.jpg" alt="Gallery Image 1" class="gallery-item">
   </div>
   <div class="row second-row">
     <img src="image2.jpg" alt="Gallery Image 2" class="gallery-item">
-    <img src="image3.jpg" alt="Gallery Image 3" class="gallery-item">
-  </div>
-  <div class="row third-row">
-    <img src="image4.jpg" alt="Gallery Image 4" class="gallery-item">
-    <img src="image5.jpg" alt="Gallery Image 5" class="gallery-item">
-  </div>
-  <div class="row fourth-row">
-    <img src="image6.jpg" alt="Gallery Image 6" class="gallery-item">
-  </div>
-  <div class="row fifth-row">
-    <img src="image7.jpg" alt="Gallery Image 7" class="thumbnail">
-    <img src="image8.jpg" alt="Gallery Image 8" class="thumbnail">
-    <img src="image9.jpg" alt="Gallery Image 9" class="thumbnail">
-    <img src="image10.jpg" alt="Gallery Image 10" class="thumbnail">
-    <img src="image11.jpg" alt="Gallery Image 11" class="thumbnail">
-  </div>
-</div>
+ </div>
 
   
 </div>
